@@ -1,0 +1,28 @@
+outputs:
+  first_out:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    loadBalanced: false
+    compression: none
+    logFailedRequests: false
+    throttleRatePerSec: "0"
+    tls:
+      disabled: true
+    connectionTimeout: 10000
+    writeTimeout: 60000
+    tokenTTLMinutes: 60
+    sendHeader: true
+    onBackpressure: drop
+    authType: manual
+    authToken: ""
+    excludeSelf: false
+    hosts:
+      - tls: inherit
+        weight: 1
+    dnsResolvePeriodSec: 600
+    loadBalanceStatsPeriodSec: 300
+    maxConcurrentSenders: 0
+    type: tcpjson
+    host: 0.0.0.0
+    port: 1112
